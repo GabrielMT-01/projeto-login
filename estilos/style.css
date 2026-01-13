@@ -1,18 +1,13 @@
 @charset "UTF-8";
 
-/* 
-    Paleta de cores
-    Verde: #49a09d
-    lilás: #5f2c82
-*/
-
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box; /* Importante para o preenchimento não quebrar o layout */
 }
 
-body, html{
+body, html {
     background-color: #5f2c82;
     height: 100vh;
     width: 100vw;
@@ -24,7 +19,7 @@ main {
     width: 100vw;
 }
 
-section#login{
+section#login {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,23 +27,110 @@ section#login{
     overflow: hidden;
 
     background-color: white;
-    width: 250px;
-    height: 500px;
+    width: 280px; /* Um pouco mais largo para mobile */
+    height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.41);
 
-    transition: width 1s, height 1s;
+    transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
 
-section#login > div#imagem{
+section#login > div#imagem {
     display: block;
-    background: #5f2c82 url(../imagens/pexels-hngstrm-1939485.jpg) no-repeat ;
+    background: #5f2c82 url('../imagens/pexels-hngstrm-1939485.jpg') no-repeat center center;
     background-size: cover; 
     height: 200px;
 }
 
-section#login > div#formulario{
+section#login > div#formulario {
     display: block;
-    padding: 10px;
+    padding: 20px;
+}
+
+section#login h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section#login p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+/* Estilo básico do input para o texto aparecer bem */
+input[type="email"] {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+div#formulario > h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p{
+    font-size: 0.8em;
+}
+
+form > div#campo{
+    background-color: #5f2c82;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    margin: 5px 0px
+}
+
+div.campo > label{
+    display: none;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover{
+    background-color: #2d6462;
+}
+
+form > a.botao{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 7px ;
+    background-color: white;
+    color: #2d6462;
+    border: 1px solid #2d6462;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+form > a.botao:hover{
+    background-color: #6cd3cf;
+}
+
+form > a.botao > span{
+    font-size: 0.8em;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
